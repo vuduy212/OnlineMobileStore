@@ -1,0 +1,344 @@
+﻿@{ 
+    var listPro = (List<MobileStore.Models.Entity.Product>)ViewBag.listPro;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Smart Cellular</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Admin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/Content/Admin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="~/Content/Admin/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="~/Content/Admin/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/Content/css/owl.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <!-- Google font -->
+    @*<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">*@
+    <!-- Bootstrap -->
+    @*<link type="text/css" rel="stylesheet" href="~/Content/css/bootstrap.min.css" />*@
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href="~/Content/css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/slick-theme.css" />
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href="~/Content/css/nouislider.min.css" />
+    <!-- Font Awesome Icon -->
+    @*<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">*@
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="~/Content/css/style1.css" />
+</head>
+<body>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '542162913437632',
+                xfbml: true,
+                version: 'v10.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Your Plugin chat code -->
+    <div class="fb-customerchat"
+         attribution="biz_inbox"
+         page_id="101461685422813">
+    </div>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- Header -->
+    <!-- Header -->
+    <div class="sub-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="left-info row">
+                        <li class="col-lg-6"><a href="https://mail.google.com/"><i class="fa fa-envelope"></i>abc@gmail.com</a></li>
+                        <li class="col-lg-6"><a href="#"><i class="fa fa-phone"></i>0967.666.888</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4" style="float: right">
+                    <ul>
+                        <li>
+                            @using (Html.BeginForm("SearchProduct", "Ajax"))
+                            {
+                                @Html.TextBox("productName", "", htmlAttributes: new { @class = "TextBoxSearch", @placeholder = "Enter product name:" });
+                                <input type="submit" value="Search" />
+                            }
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4" id="txtTimKiem">
+                    <ul class="right-icons">
+                        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                        <li>
+                            @if (Request.Cookies["isLogined"] != null)
+                            {
+                                if (!Convert.ToBoolean(Request.Cookies["isLogined"].Value.ToString()))
+                                {
+                                <li><a href="/Login">Login</a></li>
+
+                                }
+                                else
+                                {
+                                    <li><a href="/Login/Logout">Log out</a></li>
+
+                                    <li class="divider"></li>
+                                }
+                            }
+                            </li>
+                            <li>
+                                @if (Request.Cookies["isLogined"] != null)
+                                {
+                                    if (Convert.ToBoolean(Request.Cookies["isLogined"].Value.ToString()))
+                                    {
+
+                                        if (Request.Cookies["UserName"] != null)
+                                        {
+                                            <a href="javascript:;">@Request.Cookies["UserName"].Value.ToString()</a>
+
+                                        }
+
+                                    }
+                                }
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <header class="">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href='@Url.Action(" Index", "Home")'><h2>Smart Cellular<em> Website</em></h2></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto" style="line-height: 70px;">
+                            <li class="nav-item">
+                                <a class="nav-link" href='@Url.Action("Index", "Home")'>
+                                    Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            @Html.Action("LoadTypeProduct", "Ajax")
+                            <li class="nav-item">
+                                <a class="nav-link" href='@Url.Action("Checkout", "Checkout")'>Checkout</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href='@Url.Action("About", "About")'>About Us</a>
+                                    <a class="dropdown-item" href='@Url.Action("Blog", "Blog")'>Blog</a>
+                                    <a class="dropdown-item" href='@Url.Action("Testimonials", "Testimonials")'>Testimonials</a>
+                                    <a class="dropdown-item" href='@Url.Action("Terms", "Terms")'>Terms</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href='@Url.Action("Contact", "Contact")'>Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                @Html.Action("GetNumber", "Cart")
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <!-- Page Content -->
+        <!-- Banner Starts Here -->
+        <div class="main-banner header-text" id="top">
+            <div class="Modern-Slider">
+                <!-- Item -->
+                <div class="item item-1">
+                    <div class="img-fill">
+                        <div class="text-content">
+                            <h6>Smart Cellular cửa hàng điện thoại uy tín hàng đầu Việt Nam</h6>
+                            <h4>Sản phẩm chính hãng, mẫu mã đa dạng,<br /> bảo hành trọn đời</h4>
+                            <p>Với những sản phẩm chất lượng chính hãng, bạn sẽ được hưởng rất nhiều ưu đãi và hỗ trợ khi mua tại Smart Cellular, bạn còn chờ gì nữa mà không sắm ngay một chiếc điện thoại chính hãng tại Smart Cellular.</p>
+                            <a href='@Url.Action("Products", "Product")' class="filled-button">Products</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+                <!-- Item -->
+                <div class="item item-2">
+                    <div class="img-fill">
+                        <div class="text-content">
+                            <h6>Smart Cellular - cửa hàng bán điện thoại lớn nhất cả nước</h6>
+                            <h4>Bạn đang muốn mua điện thoại?</h4>
+                            <p>Là một trong những cửa hàng uy tín trên toàn quốc, chúng tôi cam kết với khách hàng những sản phẩm chính hãng, chất lượng, giá cả hợp lý.</p>
+                            <a href='@Url.Action("About", "About")' class="filled-button">About Us</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+                <!-- Item -->
+                <div class="item item-3">
+                    <div class="img-fill">
+                        <div class="text-content">
+                            <h6>Smart Cellular cửa hàng điện thoại uy tín hàng đầu Việt Nam</h6>
+                            <h4>Sản phẩm chính hãng, mẫu mã đa dạng,<br /> bảo hành trọn đời</h4>
+                            <p>Với những sản phẩm chất lượng chính hãng, bạn sẽ được hưởng rất nhiều ưu đãi và hỗ trợ khi mua tại Smart Cellular, bạn còn chờ gì nữa mà không sắm ngay một chiếc điện thoại chính hãng tại Smart Cellular.</p>
+                            <a href='@Url.Action("Contact", "Contact")' class="filled-button">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+            </div>
+        </div>
+        <!-- Banner Ends Here -->
+        @RenderBody();
+<div class="sub-footer">
+    <!-- top footer -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Giới thiệu</h3>
+                        <p>Cửa hàng chúng tôi đã có 5 năm kinh nghiệm về kinh doanh thiết bị điện tử</p>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fa fa-map-marker"></i>87 Ngõ 402 Mỹ Đình, Từ Liêm, Hà Nội, Việt Nam</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i>024 3766 3311</a></li>
+                            <li><a href="https://mail.google.com/"><i class="fa fa-envelope-o"></i>abc@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Danh mục</h3>
+                        <ul class="footer-links">
+                            <li><a href="#hot-deal" >Sản phẩm mới</a></li>
+                            <li><a href="@Url.Action("LoadProductByTypeID", "Ajax", new { id = 1 })">Điện thoại</a></li>
+                            <li><a href="@Url.Action("LoadProductByTypeID", "Ajax", new { id = 1 })">Máy tính</a></li>
+                            <li><a href="@Url.Action("LoadProductByTypeID", "Ajax", new { id = 1 })">Máy tính bảng</a></li>
+                            <li><a href="@Url.Action("LoadProductByTypeID", "Ajax", new { id = 1 })">Phụ kiện</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-xs"></div>
+
+
+
+                <div class="col-md-4 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Dịch vụ</h3>
+                        <ul class="footer-links">
+                            <li><a href="@Url.Action("Logout", "AdminPage")">Tài khoản</a></li>
+                            <li><a href="@Url.Action("Index", "Cart")">Xem giỏ hàng</a></li>
+                            <li><a href="#">Mua Trả Góp</a></li>
+                            <li><a href="#">Hỗ trợ Bảo hành & Sửa chữa</a></li>
+                            <li><a href="@Url.Action("Terms", "Terms")">Điều Khoản các dịch vụ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /top footer -->
+    <div id="bottom-footer" class="section" style="background-color:darkgrey">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="footer-payments">
+                        <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+                        <li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+                        <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+                        <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+                        <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+                        <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+                    </ul>
+                    <span class="copyright">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Năm &copy;
+                        <script>document.write(new Date().getFullYear());</script> Cửa hàng mỹ phầm ABCXYZ <i class="fa fa-heart-o" aria-hidden="true"></i> của <a href="https://colorlib.com" target="_blank">HLLNNN</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </span>
+                </div>
+
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /bottom footer -->
+
+</div>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="~/Content/jquery/jquery.min.js"></script>
+        <script src="~/Content/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Additional Scripts -->
+        <script src="~/Content/js/custom.js"></script>
+        <script src="~/Content/js/owl.js"></script>
+        <script src="~/Content/js/slick.js"></script>
+        <script src="~/Content/js/accordions.js"></script>
+
+        <script language="text/Javascript">
+            cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+            function clearField(t) {                   //declaring the array outside of the
+                if (!cleared[t.id]) {                      // function makes it static and global
+                    cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                    t.value = '';         // with more chance of typos
+                    t.style.color = '#fff';
+                }
+            }
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+            $('#productName').autocomplete({
+                source: '@Url.Action("SearchProduct", "Ajax")'
+            });
+        });
+        </script>
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
