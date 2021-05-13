@@ -40,3 +40,45 @@ D:\ThucTapWeb\Project-main\Project\BTL\MobileStore\MobileStore\obj\Release\Mobil
 D:\ThucTapWeb\Project-main\Project\BTL\MobileStore\MobileStore\obj\Release\MobileStore.csproj.CopyComplete
 D:\ThucTapWeb\Project-main\Project\BTL\MobileStore\MobileStore\obj\Release\MobileStore.dll
 D:\ThucTapWeb\Project-main\Project\BTL\MobileStore\MobileStore\obj\Release\MobileStore.pdb
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\MobileStore.dll.config
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\MobileStore.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\MobileStore.pdb
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\Antlr3.Runtime.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\EntityFramework.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\EntityFramework.SqlServer.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\Newtonsoft.Json.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\PagedList.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\PagedList.Mvc.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Net.Http.Formatting.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Helpers.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Http.Common.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Http.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Mvc.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Optimization.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Razor.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.WebPages.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\WebGrease.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\EntityFramework.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\EntityFramework.SqlServer.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\Newtonsoft.Json.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\PagedList.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\PagedList.Mvc.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Net.Http.Formatting.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Http.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Http.Common.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Helpers.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Mvc.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Optimization.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.Razor.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.WebPages.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\bin\Antlr3.Runtime.pdb
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\obj\Release\MobileStore.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\obj\Release\MobileStore.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\obj\Release\MobileStore.csproj.CopyComplete
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\obj\Release\MobileStore.dll
+C:\Users\ADMIN\Desktop\Thuc Tap Web\ThucTapWebEnding\Project-main\Project\BTL\MobileStore\MobileStore\obj\Release\MobileStore.pdb

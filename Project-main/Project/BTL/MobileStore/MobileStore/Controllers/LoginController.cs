@@ -42,15 +42,16 @@ namespace MobileStore.Controllers
                 Response.Cookies["UserId"].Expires = DateTime.Now.AddDays(2);
                 Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(2);
 
-                if (userLogins.UserID.ToString() == "4")
+                if (userLogins.UserID.ToString() == "10")
                 {
                     Response.Cookies["isAdmin"].Value = "true";
+                    return RedirectToAction("Index", "AdminPage");
                 }
                 else
                 {
                     Response.Cookies["isAdmin"].Value = "false";
+                    return RedirectToAction("Index", "Home");
                 }
-                return RedirectToAction("Index", "Home");
             }
             message = "Tài khoản hoặc mật khẩu không chính xác";
             type = 2;
@@ -71,10 +72,10 @@ namespace MobileStore.Controllers
             {
                 userLogin.Username = null;
                 userLogin.Password = null;
-                userLogin.UserID = long.Parse(userID);
+                /*userLogin.UserID = long.Parse(userID);
                 db.Configuration.ValidateOnSaveEnabled = false;
                 db.Users.Add(userLogin);
-                db.SaveChanges();
+                db.SaveChanges();*/
             }
             Response.Cookies["isLogined"].Value = "true";
             return RedirectToAction("Index", "Home");

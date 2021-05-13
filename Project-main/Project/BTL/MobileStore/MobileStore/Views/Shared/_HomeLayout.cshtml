@@ -98,38 +98,41 @@
                         <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+
+
+                        @if (Request.Cookies["isLogined"] != null)
+                        {
+                            if (!Convert.ToBoolean(Request.Cookies["isLogined"].Value.ToString()))
+                            {
+                                <li><a href="/Login">Login</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="/Login/Logout">Log out</a></li>
+                                <li class="divider"></li>
+                            }
+                        }
+                        else
+                        {
+                            <li><a href="/Login">Login</a></li>
+                        }
+                        
                         <li>
                             @if (Request.Cookies["isLogined"] != null)
                             {
-                                if (!Convert.ToBoolean(Request.Cookies["isLogined"].Value.ToString()))
+                                if (Convert.ToBoolean(Request.Cookies["isLogined"].Value.ToString()))
                                 {
-                                <li><a href="/Login">Login</a></li>
 
-                                }
-                                else
-                                {
-                                    <li><a href="/Login/Logout">Log out</a></li>
-
-                                    <li class="divider"></li>
-                                }
-                            }
-                            </li>
-                            <li>
-                                @if (Request.Cookies["isLogined"] != null)
-                                {
-                                    if (Convert.ToBoolean(Request.Cookies["isLogined"].Value.ToString()))
+                                    if (Request.Cookies["UserName"] != null)
                                     {
-
-                                        if (Request.Cookies["UserName"] != null)
-                                        {
-                                            <a href="javascript:;">@Request.Cookies["UserName"].Value.ToString()</a>
-
-                                        }
+                                        <a href="javascript:;">@Request.Cookies["UserName"].Value.ToString()</a>
 
                                     }
+
                                 }
-                            </li>
-                        </ul>
+                            }
+                        </li>
+                    </ul>
 
                     </div>
                 </div>

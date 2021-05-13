@@ -16,7 +16,7 @@ namespace MobileStore.Controllers
         // GET: AdminPage
         public ActionResult Index()
         {
-            if(Session["USER_SESSION"] != null)
+            /*if(Session["USER_SESSION"] != null)
             {
                 ProductDAO product = new ProductDAO();
                 return View(product.SelectAll());
@@ -24,7 +24,9 @@ namespace MobileStore.Controllers
             else
             {
                 return RedirectToAction("Login");
-            }
+            }*/
+            ProductDAO product = new ProductDAO();
+            return View(product.SelectAll());
         }
 
         public ActionResult Login()
@@ -51,11 +53,11 @@ namespace MobileStore.Controllers
                     Session.Add(UserLogin.USER_SESSION, userSession);
                     Session["USER_SESSION"] = userSession.Username;
                     //return RedirectToAction("Index", "AdminPage");
-                    if (userSession.Username.ToString() == "admin")
+                    /*if (userSession.Username.ToString() == "duy2")
                     {
                         return RedirectToAction("Index", "AdminPage");
                     }
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home");*/
                 }
                 else if(result == 0)
                 {
